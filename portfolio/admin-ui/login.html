@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Connexion</title>
+  <link rel="stylesheet" href="assets/admin.css">
+</head>
+<body class="login-page">
+  <form id="loginForm" class="login-box">
+    <h1>Espace privé</h1>
+    <p class="muted">Connecte-toi pour gérer ton portfolio.</p>
+    <label>Identifiant<input name="username" required autocomplete="username"></label>
+    <label>Mot de passe<input type="password" name="password" required autocomplete="current-password"></label>
+    <button class="btn" type="submit">Se connecter</button>
+    <p id="err" class="err"></p>
+  </form>
+  <script src="assets/login.js"></script>
+</body>
+</html>

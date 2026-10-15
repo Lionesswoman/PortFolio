@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Administration</title>
+  <link rel="stylesheet" href="assets/admin.css">
+</head>
+<body>
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">Portfolio<span>admin</span></div>
+    <nav>
+      <button data-tab="profile" class="active">👤 Mon profil</button>
+      <button data-tab="projects">🚀 Projets</button>
+      <button data-tab="skills">⚡ Compétences</button>
+      <button data-tab="experiences">🎓 Parcours</button>
+      <button data-tab="messages">✉️ Messages <span id="msgBadge" class="badge hidden"></span></button>
+      <button data-tab="security">🔒 Sécurité</button>
+    </nav>
+    <div class="side-foot">
+      <span id="who"></span>
+      <a href="/" target="_blank" rel="noopener">Voir le site ↗</a>
+      <button id="logoutBtn" class="link-btn danger" type="button">Déconnexion</button>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <button id="menuBtn" class="menu-btn" type="button" aria-label="Menu">☰</button>
+      <h1 id="pageTitle">Mon profil</h1>
+    </header>
+    <section id="view"></section>
+  </main>
+
+  <div class="modal" id="modal">
+    <div class="modal-box">
+      <h2 id="modalTitle"></h2>
+      <form id="modalForm" class="grid-form"></form>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+  <script src="assets/admin.js"></script>
+</body>
+</html>
