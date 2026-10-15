@@ -1,7 +1,7 @@
 const $ = (s, el = document) => el.querySelector(s);
 const $$ = (s, el = document) => [...el.querySelectorAll(s)];
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-const safeUrl = (u) => (/^(https?:\/\/|\/uploads\/)/i.test(u || '') ? u : '');
+const safeUrl = (u) => (/^(https?:\/\/|\/(?!\/))/i.test(u || '') ? u : ''); // liens http(s) ou chemins du site (/img, /docs, /uploads)
 const techs = (p) => (p.tech || '').split(',').map((t) => t.trim()).filter(Boolean);
 const initialsOf = (txt) => String(txt || '').split(/\s+/).filter(Boolean).map((w) => w[0]).slice(0, 2).join('').toUpperCase();
 const TONES = ['violet', 'indigo', 'teal', 'amber', 'rose', 'sky'];
